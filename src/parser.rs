@@ -101,7 +101,7 @@ fn parse_pair(pair: Pair<Rule>) -> Value {
     }
 }
 
-pub fn parse(lua: &Lua, data: String) -> Result<LuaValue<'_>> {
+pub fn parse(lua: &Lua, data: String) -> Result<LuaValue> {
     let data = match Json5Parser::parse(Rule::text, data.as_str()) {
         Ok(mut data) => data.next().unwrap(),
         Err(err) => return Err(ExternalError(Arc::new(err))),

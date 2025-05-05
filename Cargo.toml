@@ -7,6 +7,6 @@ edition = "2021"
 crate-type = ["cdylib"]
 
 [dependencies]
-pest = "2.1"
-pest_derive = "2.1"
-mlua = { version = "0.9", features = ["luajit", "module", "macros"] }
+pest = "2.8"
+pest_derive = "2.8"
+mlua = { version = "0.10", features = ["luajit", "module", "macros"] }
